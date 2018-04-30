@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
 //        System.out.println("Hello, World!");
@@ -30,5 +32,14 @@ public class HelloWorld {
         int y = 2;
         x /= y;
         y -= x;
+
+        String userInput;  //initializes variable
+        Scanner sc;  // declares a variable
+                sc = new Scanner(System.in);  //created a Scanner object to use for listening
+
+        System.out.print("Enter something: ");  //question for user
+        userInput = sc.nextLine(); //listening for user input & assigning it to the userInput variable
+
+        System.out.println("You entered: --> \"" + userInput + "\" <--");  //takes user input and outputs result to the console
     }
 }
