@@ -13,7 +13,7 @@ public class ControlFlowExercises {
 //      256
 //      65536
 
-        for (int i = 0; i < 101; i += 2) {
+        for (int i = 100; i > -11; i -= 5) {
             System.out.println(i);
         }
     }
