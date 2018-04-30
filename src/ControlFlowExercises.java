@@ -13,11 +13,8 @@ public class ControlFlowExercises {
 //      256
 //      65536
 
-        int i = 2;
-
-        do {
+        for (int i = 0; i < 101; i += 2) {
             System.out.println(i);
-            i *= i;
-        } while (i <= 1000000);
+        }
     }
 }
