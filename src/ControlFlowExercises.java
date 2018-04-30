@@ -1,16 +1,16 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-//      While
+//      Fizzbuzz
 //
-//      Create an integer variable i with a value of 5.
-//      Create a while loop that runs so long as i is less than or equal to 15
-//      Each loop iteration, output the current value of i, then increment i by one.
-//      Your output should look like this:
+//      One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
 //
-//5 6 7 8 9 10 11 12 13 14 15
+//      Write a program that prints the numbers from 1 to 100.
+//      For multiples of three print “Fizz” instead of the number
+//      For the multiples of five print “Buzz”.
+//      For numbers which are multiples of both three and five print “FizzBuzz”.
 
-        for (int i = 5; i <= 15; i++) {
+        for (int i = 1; i < 101; i++) {
             System.out.println(i);
         }
     }
