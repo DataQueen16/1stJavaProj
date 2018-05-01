@@ -12,50 +12,50 @@ public class ControlFlowExercises {
 //      For the multiples of five print “Buzz”.
 //      For numbers which are multiples of both three and five print “FizzBuzz”.
 
-//        for (int i = 1; i < 101; i++) {
-//            if ((i % 5 == 0) && (i % 3 == 0)){
-//                System.out.println("FizzBuzz");
-//            } else if (i % 5 == 0){
-//                System.out.println("Buzz");
-//            } else if (i % 3 == 0) {
-//                System.out.println("Fizz");
-//            } else {
-//                System.out.println(i);
-//            }
-//        }
+        for (int i = 1; i < 101; i++) {
+            if ((i % 5 == 0) && (i % 3 == 0)){
+                System.out.println("FizzBuzz");
+            } else if (i % 5 == 0){
+                System.out.println("Buzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else {
+                System.out.println(i);
+            }
+        }
 
-//        int num;
-//        int square;
-//        int cube;
-//        String answer;
-//        Scanner input = new Scanner(System.in);
-//
-//
-//        do {
-//            System.out.println();
-//            System.out.println("Would you like me to create a table today?");
-//            answer = input.next();
-//
-//            System.out.print("How high would you like to go?");
-//            num = input.nextInt();
-//
-//            System.out.print("Integer");
-//            System.out.printf("%10s", "| Squared");
-//            System.out.printf("%8s", "| Cubed");
-//            System.out.println();
-//            System.out.println("------- | ------- | -----");
-//
-//
-//            for (int i = 1; i <= num; i++) {
-//                System.out.printf("%-8s", i);
-//                square = i * i;
-//                System.out.printf("%-10s", "| " + square);
-//                cube = i * i * i;
-//                System.out.printf("%-8s", "| " + cube);
-//                System.out.println();
-//
-//            }
-//        } while (answer.equals("yes"));
+        int num;
+        int square;
+        int cube;
+        String answer;
+        Scanner input = new Scanner(System.in);
+
+
+        do {
+            System.out.println();
+            System.out.println("Would you like me to create a table today?");
+            answer = input.next();
+
+            System.out.print("How high would you like to go?");
+            num = input.nextInt();
+
+            System.out.print("Integer");
+            System.out.printf("%10s", "| Squared");
+            System.out.printf("%8s", "| Cubed");
+            System.out.println();
+            System.out.println("------- | ------- | -----");
+
+
+            for (int i = 1; i <= num; i++) {
+                System.out.printf("%-8s", i);
+                square = i * i;
+                System.out.printf("%-10s", "| " + square);
+                cube = i * i * i;
+                System.out.printf("%-8s", "| " + cube);
+                System.out.println();
+
+            }
+        } while (answer.equals("yes"));
 
 
 //        Convert given number grades into letter grades.
@@ -97,5 +97,13 @@ public class ControlFlowExercises {
                 System.out.println("You failed & will have to repeat this class. You earned an F.");
             }
         } while (keepGoing.equals("yes"));
+
+//        Bonus exercises --
+//        1. Write a program in Java to read 10 numbers from keyboard and find their sum and average
+//        Expected Output :
+//        The sum of 10 numbers is : 55
+//        The Average is : 5.500000
+
+
     }
 }
