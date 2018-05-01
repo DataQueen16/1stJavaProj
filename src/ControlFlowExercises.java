@@ -74,21 +74,28 @@ public class ControlFlowExercises {
 //        F : 59 - 0
 
         int input;
+        String keepGoing;
         Scanner grade = new Scanner(System.in);
+        Scanner response = new Scanner(System.in);
 
-        System.out.println("Please enter your percent from 1-100: ");
-        input = grade.nextInt();
+        do {
+            System.out.println("Would you like to find out your grade now?");
+            keepGoing = response.next();
 
-        if ((input > 87) && (input < 101)) {
-            System.out.println("You earned an A!");
-        } else if ((input >79) && (input < 88)) {
-            System.out.println("You earned a B!");
-        } else if ((input > 66) && (input < 80)) {
-            System.out.println("You earned a C!");
-        } else if ((input > 59) && (input < 67)) {
-            System.out.println("I'm sorry, you failed. You earned a D.");
-        } else if ((input >= 0) && (input < 60)) {
-            System.out.println("You failed & will have to repeat this class. You earned an F.");
-        }
+            System.out.println("Please enter your percent from 1-100: ");
+            input = grade.nextInt();
+
+            if ((input > 87) && (input < 101)) {
+                System.out.println("You earned an A!");
+            } else if ((input > 79) && (input < 88)) {
+                System.out.println("You earned a B!");
+            } else if ((input > 66) && (input < 80)) {
+                System.out.println("You earned a C!");
+            } else if ((input > 59) && (input < 67)) {
+                System.out.println("I'm sorry, you failed. You earned a D.");
+            } else if ((input >= 0) && (input < 60)) {
+                System.out.println("You failed & will have to repeat this class. You earned an F.");
+            }
+        } while (keepGoing.equals("yes"));
     }
 }
