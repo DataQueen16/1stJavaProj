@@ -73,7 +73,7 @@ public class ControlFlowExercises {
 //        D : 66 - 60
 //        F : 59 - 0
 
-        int input;
+        int in;
         String keepGoing;
         Scanner grade = new Scanner(System.in);
         Scanner response = new Scanner(System.in);
@@ -83,17 +83,17 @@ public class ControlFlowExercises {
             keepGoing = response.next();
 
             System.out.println("Please enter your percent from 1-100: ");
-            input = grade.nextInt();
+            in = grade.nextInt();
 
-            if ((input > 87) && (input < 101)) {
+            if (in > 89) {
                 System.out.println("You earned an A!");
-            } else if ((input > 79) && (input < 88)) {
+            } else if (in > 79) {
                 System.out.println("You earned a B!");
-            } else if ((input > 66) && (input < 80)) {
+            } else if (in > 69) {
                 System.out.println("You earned a C!");
-            } else if ((input > 59) && (input < 67)) {
+            } else if (in > 59) {
                 System.out.println("I'm sorry, you failed. You earned a D.");
-            } else if ((input >= 0) && (input < 60)) {
+            } else if ((in >= 0) && (in < 59)) {
                 System.out.println("You failed & will have to repeat this class. You earned an F.");
             }
         } while (keepGoing.equals("yes"));
