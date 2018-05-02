@@ -92,8 +92,28 @@ public class MethodsExercises {
         // Result of divide method call in a variable
         long divideTotal = divide(divide1, divide2);
 
+        // Output to the console with the total
         System.out.println(divide1 + " / " + divide2 + " = " + divideTotal);
+        System.out.println();
 
+        // Create modulo integers
+        int mod1;
+        int mod2;
+
+        // Prompt user for variables
+        System.out.println("Greetings human....");
+        System.out.print("Please enter the 1st modulo number: ");
+        mod1 = answer.nextInt();
+        System.out.print("Enter the 2nd modulo number: ");
+        mod2 = answer.nextInt();
+
+        // Store result of modulo method call in a variable for use
+        int moduloTotal = modulo(mod1, mod2);
+
+        // Show result of calculation in console
+        System.out.println(mod1 + " % " + mod2 + " = " + moduloTotal);
+        System.out.println("Are you surprised human?");
+        System.out.println();
     }
 
     public static int add(int num1, int num2) {
@@ -113,6 +133,11 @@ public class MethodsExercises {
 
     public static long divide(long number1, long number2) {
         long total = number1 / number2;
+        return total;
+    }
+
+    public static int modulo(int mod1, int mod2) {
+        int total = mod1 % mod2;
         return total;
     }
 }
