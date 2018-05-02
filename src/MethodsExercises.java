@@ -119,7 +119,7 @@ public class MethodsExercises {
 
     public static int getInt(int min, int max) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter your min number: ");
+        System.out.println("Please input your number: ");
         int answer = input.nextInt();
 
        if ((answer < min) || (answer > max)) {
