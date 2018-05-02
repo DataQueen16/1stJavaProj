@@ -2,21 +2,6 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-
-//        Basic Arithmetic
-//
-//        Create four separate methods. Each will perform an arithmetic operation:
-//
-//        Addition
-//        Subtraction
-//        Multiplication
-//        Division
-//        Each function needs to take two parameters/arguments so that the operation can be performed.
-//
-//        Test your functions and verify the output.
-//
-//        Add a modulus function that finds the modulus of two numbers.
-//
 //          Food for thought: What happens if we try to divide by zero? What should happen?
 //
 //        Bonus
@@ -114,7 +99,37 @@ public class MethodsExercises {
         System.out.println(mod1 + " % " + mod2 + " = " + moduloTotal);
         System.out.println("Are you surprised human?");
         System.out.println();
+
+//       2. Create a method that validates that user input is in a certain range
+//        The method signature should look like this:
+//
+//        public static int getInteger(int min, int max);
+//        and is used like this:
+//
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        If the input is invalid, prompt the user again.
+//
+//                Hint: recursion might be helpful here!
+
+    getInt(50, 75);
+
     }
+
+
+    public static int getInt(int min, int max) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter your min number: ");
+        int answer = input.nextInt();
+
+       if ((answer < min) || (answer > max)) {
+           System.out.println("Sorry, try again my dear...\n");
+           return getInt(min, max);
+       }
+
+       return answer;
+    }
+
 
     public static int add(int num1, int num2) {
         int total = num1 + num2;
