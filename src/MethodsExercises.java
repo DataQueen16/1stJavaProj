@@ -77,6 +77,23 @@ public class MethodsExercises {
         System.out.println(var1 + " x " + var2 + " = " + multiplyTotal);
         System.out.println();
 
+
+        // Create divide variables
+        long divide1;
+        long divide2;
+
+        // Prompt user for variables
+        System.out.println("It's time to divide.");
+        System.out.print("Please enter the 1st number: ");
+        divide1 = answer.nextLong();
+        System.out.print("Enter the 2nd number: ");
+        divide2 = answer.nextLong();
+
+        // Result of divide method call in a variable
+        long divideTotal = divide(divide1, divide2);
+
+        System.out.println(divide1 + " / " + divide2 + " = " + divideTotal);
+
     }
 
     public static int add(int num1, int num2) {
@@ -91,6 +108,11 @@ public class MethodsExercises {
 
     public static int multiply(int var1, int var2) {
         int total = var1 * var2;
+        return total;
+    }
+
+    public static long divide(long number1, long number2) {
+        long total = number1 / number2;
         return total;
     }
 }
