@@ -39,7 +39,7 @@ public class MethodsExercises {
         // Assign the result of the method call to a variable for the sout
         int addTotal = add(addAnswer1, addAnswer2);
 
-        System.out.println("The result of " + addAnswer1 + " plus " + addAnswer2 + " is " + addTotal);  // Call the add function using the user's answers
+        System.out.println(addAnswer1 + " + " + addAnswer2 + " = " + addTotal);  // Call the add function using the user's answers
         System.out.println();
 
         // Subtract method test
@@ -56,7 +56,25 @@ public class MethodsExercises {
         // Assign the result of the method call to a variable for the sout
         double subtractTotal = subtract(number1, number2);
 
-        System.out.println(number1 + " minus " + number2 + " gives you " + subtractTotal);
+        System.out.println(number1 + " - " + number2 + " = " + subtractTotal);
+        System.out.println();
+
+
+        // Create variables for multiply method
+        int var1;
+        int var2;
+
+        // Prompt user for variables
+        System.out.print("Let's multiply.\nPlease enter your 1st number: ");
+        var1 = answer.nextInt();
+        System.out.print("Please enter the 2nd number: ");
+        var2 = answer.nextInt();
+
+        // Assign result of method call to a variable for clarity
+        int multiplyTotal = multiply(var1, var2);
+
+        // Output the result
+        System.out.println(var1 + " x " + var2 + " = " + multiplyTotal);
         System.out.println();
 
     }
