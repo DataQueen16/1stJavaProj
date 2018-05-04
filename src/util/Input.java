@@ -53,7 +53,6 @@ public class Input {
     }
 
     public double getDouble(String prompt) {
-        System.out.println(prompt);
         return scanner.nextDouble();
     }
 }
