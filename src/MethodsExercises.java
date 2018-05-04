@@ -126,8 +126,8 @@ public class MethodsExercises {
 //        3! = 1 x 2 x 3       = 6
 //        4! = 1 x 2 x 3 x 4   = 24
 
-//        factorialLayout();
-        calculateFactorial(6);
+        factorialLayout();
+
 
 
     }
@@ -137,6 +137,7 @@ public class MethodsExercises {
         System.out.print("Please enter a number from 1-10: ");
         int num = input.nextInt();
         int total;
+        int calculate = calculateFactorial(num);
 
         if ((num > 0) && (num < 11)) {
 
@@ -146,7 +147,7 @@ public class MethodsExercises {
                 num -= 1;
             }
             System.out.print(num + " = ");
-            calculateFactorial(num);
+            System.out.print(calculate);
             return num;
         }
 
@@ -155,15 +156,12 @@ public class MethodsExercises {
     }
 
     public static int calculateFactorial(int number) {
-        if (number > 0) {
-            for (int j = number; j > 0; j--) {
-                int total = number * calculateFactorial(number - 1);
-                System.out.println(total);
-                return total;
+            int total = 1;
+            for (int i = number; i >= 1; i--) {
+                total *= i;
             }
-        }
-        System.out.println(number);
-        return number;
+        System.out.print(total);
+        return total;
     }
 
 
