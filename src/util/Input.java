@@ -8,50 +8,52 @@ public class Input {
         scanner = new Scanner(System.in).useDelimiter("\n");
     }
 
-    public String getString() {
+    public String getString(String prompt) {
+        System.out.println(prompt);
         return scanner.next();
     }
 
-    public boolean yesNo() {
-        System.out.println("Do you like Black Panther?");
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
         String answer = scanner.next();
-        if (answer.equals("y") || answer.equals("yes")) {
+        if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes")) {
             System.out.println(true);
             return true;
         }
         System.out.println(false);
+        System.out.println(prompt);
         return false;
     }
 
-    public int getInt(int min, int max) {
-        System.out.println("Let's see if you can read my mind.\nPick a number in my range: ");
+    public int getInt(String prompt, int min, int max) {
+        System.out.println(prompt);
         int num = scanner.nextInt();
         if (num >= min && num <= max) {
             System.out.println("You did it! " + num + " is in range!");
             return num;
         }
         System.out.println("Try again poor dear!");
-        return getInt(min, max);
+        return getInt(prompt, min, max);
     }
 
-    public int getInt() {
-        System.out.println("What's your favorite number?");
+    public int getInt(String prompt) {
+        System.out.println(prompt);
         return scanner.nextInt();
     }
 
-    public double getDouble(double min, double max) {
-        System.out.println("Let's see if you can read my mind with bigger numbers.\nPick a number in my range: ");
+    public double getDouble(String prompt, double min, double max) {
+        System.out.println(prompt);
         int num = scanner.nextInt();
         if (num >= min && num <= max) {
             System.out.println("You did it! " + num + " is in range!");
             return num;
         }
         System.out.println("Try again poor dear!");
-        return getDouble(min, max);
+        return getDouble(prompt, min, max);
     }
 
-    public double getDouble() {
-        System.out.println("Please enter another number in decimals: ");
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
         return scanner.nextDouble();
     }
 }

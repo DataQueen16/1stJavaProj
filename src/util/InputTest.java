@@ -7,19 +7,18 @@ public class InputTest {
         Input input = new Input();
         String answer;
 
-//        System.out.println("Tell me your name today: ");
-//        answer = input.getString();
-//        System.out.println("Your name is " + answer);
+        answer = input.getString("What's your name deary?");
+        System.out.println("Your name is " + answer);
 
-//        input.yesNo();
-//        input.getInt(75, 100);
+        input.yesNo("Do you like Black Panther?");
+        input.getInt("What is my age?",30, 45);
 
-//        int num = input.getInt();
-//        System.out.println(num);
+        int num = input.getInt("What's your favorite number?");
+        System.out.println(num);
 
-//        input.getDouble(25, 50);
+        input.getDouble("What is the easiest age to get pregnant?",21, 29);
 
-        double num2 = input.getDouble();
+        double num2 = input.getDouble("How old is San Antonio?");
         System.out.println(num2);
     }
 }
