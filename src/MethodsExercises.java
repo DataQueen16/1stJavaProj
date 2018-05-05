@@ -14,7 +14,7 @@ public class MethodsExercises {
 //        int addAnswer2;
 //
 //        // Create an object to hold the user answers
-//        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 //        System.out.print("Let's add.\nPlease enter the 1st integer: ");  // Prompt the user for 1st integer
 //        addAnswer1 = input.nextInt();  // Store the answer in addAnswer1 variable
 //
@@ -126,10 +126,52 @@ public class MethodsExercises {
 //        3! = 1 x 2 x 3       = 6
 //        4! = 1 x 2 x 3 x 4   = 24
 
-        factorialLayout();
+//        factorialLayout();
+
+//        Create an application that simulates dice rolling.
+//
+//                Ask the user to enter the number of sides for a pair of dice.
+//        Prompt the user to roll the dice.
+//        "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+//        Use static methods to implement the method(s) that generate the random numbers.
+//                Use the .random method of the java.lang.Math class to generate random numbers.
+
+        int sides1;  // Variable to hold the number of sides for a dice
+        int sides2;
+        String roll;  // Roll the dice
+        System.out.println("Please enter the number of sides for one dice: ");
+        sides1 = input.nextInt();
+
+        System.out.println("Now enter another number for the 2nd dice: ");
+        sides2 = input.nextInt();
+
+        System.out.println("Please roll the dice: ");
+        diceRoll(sides1, sides2);
 
 
 
+    }
+
+    public static double diceRoll(double num, double num2){
+        double dice1 = ((Math.random() * num) + 1);
+        double dice2 = ((Math.random() * num2) + 1);
+        System.out.println("You rolled " + dice1 + " & " + dice2);
+        rollAgain(prompt);
+        return dice1 + dice2;
+    }
+
+    public static String rollAgain(String prompt){
+        Scanner input = new Scanner(System.in);  // Create a new scanner input object
+        System.out.println("Would you like to roll again?"); // Prompt user to roll
+        prompt = input.next();
+
+        if ("y".equalsIgnoreCase(prompt) || "yes".equalsIgnoreCase(prompt)){
+            String excite = "Here we go!";
+            diceRoll(num, num2);
+            return excite;
+        }
+        String excite = "Thanks for playing. Maybe next time!";
+        return excite;
     }
 
     public static int factorialLayout() {
