@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class ServerNameGenerator {
     static String[] nouns =
-            {"Monkey", "Chicken", "Volt", "Hairpiece", "Elephant", "Plug", "Cup", "Fan", "Wig", "Dreads"};
+            {"Monkey", "Chicken", "Volt", "Hairpiece", "Elephant", "Plug", "Cup", "Fan", "Wig", "Dreds"};
     static String[] adjectives =
             {"Silky", "Slippery", "Wild", "Volatile", "Fused", "Wrinkled", "Melted", "Lucid", "Beaded", "Vintage"};
 
