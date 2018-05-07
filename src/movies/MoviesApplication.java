@@ -3,25 +3,25 @@ package movies;
 import util.Input;
 
 public class MoviesApplication {
-    public static void main(String[] args) {
-
-
-    }
 
     Movie[] movies = MoviesArray.findAll();
     Input input = new Input();  // Create an input object to access the Input class
 
     public String menuChoices() {
-        input.getString("Greetings! What would you like to do today?"); // Greet the user
+        System.out.println("Greetings! What would you like to do today?"); // Greet the user
+        System.out.println();
 
-        int answer = input.getInt("1. See all movies\n2. Select a specific category\n3. Exit"); // Prompt user for the 1st 3 part menu
+        System.out.println("1. See all movies\n2. Select a specific category\n3. Exit");
+        System.out.println();
+
+        int answer = input.getInt("Pick a number please..."); // Prompt user for the 1st 3 part menu
 
         switch (answer){
             case 1:           // If choose see all movies, call iterateAllMovies method to display them to the user
                 System.out.println(iterateAllMovies());
                 break;
             case 2:          // Call the Genre list/method
-                System.out.println("Movies");
+                System.out.println(returnCategories());
                 break;
             case 3:         // If user chooses to exit, leave the application
                 System.out.println("Thanks, come again!");
@@ -43,57 +43,34 @@ public class MoviesApplication {
     }
 
     public String returnCategories() {
-        input.getString("Greetings! What genre are you interested in?"); // Prompt user for genre
+        System.out.println("Greetings! What genre are you interested in?");
+        System.out.println("1. Drama\n2. Musical\n3. Sci-fi\n4. Horror\n5. Comedy\n6. Animated");
 
-        int answer = input.getInt("1. Drama\n2. Musical\n3. Sci-fi\n4. Horror\n\n5. Comedy\n6. Animated");  // List choices 1-6
+        int answer = input.getInt("Pick a number please.....");  // List choices 1-6
         switch (answer){
             case 1:
                 String input1 = "Drama";
-                for (Movie movie: movies){
-                    if (input1.equalsIgnoreCase(movie.getCategory())){
-                        System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
-                    }
-                }
+                iterateCategories(input1);
                 break;
             case 2:
                 String input2 = "Musical";
-                for (Movie movie: movies){
-                    if (input2.equalsIgnoreCase(movie.getCategory())){
-                        System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
-                    }
-                }
+                iterateCategories(input2);
                 break;
             case 3:
                 String input3 = "Scifi";
-                for (Movie movie: movies){
-                    if (input3.equalsIgnoreCase(movie.getCategory())){
-                        System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
-                    }
-                }
+                iterateCategories(input3);
                 break;
             case 4:
                 String input4 = "Horror";
-                for (Movie movie: movies){
-                    if (input4.equalsIgnoreCase(movie.getCategory())){
-                        System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
-                    }
-                }
+                iterateCategories(input4);
                 break;
             case 5:
                 String input5 = "Comedy";
-                for (Movie movie: movies){
-                    if (input5.equalsIgnoreCase(movie.getCategory())){
-                        System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
-                    }
-                }
+                iterateCategories(input5);
                 break;
             case 6:
                 String input6 = "Animated";
-                for (Movie movie: movies){
-                    if (input6.equalsIgnoreCase(movie.getCategory())){
-                        System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
-                    }
-                }
+                iterateCategories(input6);
                 break;
             default:
                 System.out.println("Incorrect number entered. Please try again.");
@@ -101,5 +78,18 @@ public class MoviesApplication {
         }
         String end = "End of List";
         return end;
+    }
+
+    public void iterateCategories(String input){
+        for (Movie movie: movies){
+            if (input.equalsIgnoreCase(movie.getCategory())){
+                System.out.println("Title: " + movie.getName() + ", Genre: " + movie.getCategory());
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        MoviesApplication movies = new MoviesApplication();
+        movies.menuChoices();
     }
 }
