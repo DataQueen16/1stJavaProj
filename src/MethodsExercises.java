@@ -174,6 +174,7 @@ public class MethodsExercises {
         return excite;
     }
 
+
     public static int factorialLayout() {
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter a number from 1-10: ");
