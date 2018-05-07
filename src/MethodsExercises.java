@@ -156,18 +156,18 @@ public class MethodsExercises {
         double dice1 = ((Math.random() * num) + 1);
         double dice2 = ((Math.random() * num2) + 1);
         System.out.println("You rolled " + dice1 + " & " + dice2);
-        rollAgain(prompt);
+        rollAgain();
         return dice1 + dice2;
     }
 
-    public static String rollAgain(String prompt){
+    public static String rollAgain(){
         Scanner input = new Scanner(System.in);  // Create a new scanner input object
         System.out.println("Would you like to roll again?"); // Prompt user to roll
-        prompt = input.next();
+        String prompt = input.next();
 
         if ("y".equalsIgnoreCase(prompt) || "yes".equalsIgnoreCase(prompt)){
             String excite = "Here we go!";
-            diceRoll(num, num2);
+            diceRoll(6.0, 6.0);
             return excite;
         }
         String excite = "Thanks for playing. Maybe next time!";
