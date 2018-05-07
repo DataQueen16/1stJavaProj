@@ -16,6 +16,7 @@ public class ServerNameGenerator {
         int b = randomNumber(0, 9);
 
         String serverName = nouns[a] + "-" + adjectives[b];
+        System.out.println("This is your server name: " + serverName);
         return serverName;
     }
 
