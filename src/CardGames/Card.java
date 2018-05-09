@@ -26,4 +26,8 @@ public class Card {
     public String getValue() {
         return value;
     }
+
+    public int setID(int ID) { return this.ID = ID;}
+
+    public int getID() { return ID;}
 }
