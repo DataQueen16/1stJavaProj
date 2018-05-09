@@ -10,11 +10,9 @@ public class GameOfWar {
     public static String turn2;
 
     public static int playCard1() {
-        turn1 = play.getRandom(1, 52);
     }
 
     public static int playCard2() {
-        turn2 = play.getRandom(1, 52);
     }
 
 }

@@ -17,8 +17,4 @@ public class Player {
         return gamesWon;
     }
 
-    public int getRandom(int min, int max) {
-        Random r = new Random();
-        return r.ints(min, (max + 1)).findFirst().getAsInt();
-    }
 }
