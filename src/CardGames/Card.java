@@ -1,12 +1,14 @@
 package CardGames;
 
-abstract class Card {
+public class Card {
     private String suit;
     private String value;
+    private int ID;
 
-    public Card(String suit, String value){
+    public Card(String suit, String value, int ID){
         this.suit = suit;
         this.value = value;
+        this.ID = ID;
     }
 
     public String setSuit(String suit) {
