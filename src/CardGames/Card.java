@@ -30,4 +30,6 @@ public class Card {
     public int setID(int ID) { return this.ID = ID;}
 
     public int getID() { return ID;}
+
+
 }

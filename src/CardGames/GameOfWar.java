@@ -10,6 +10,7 @@ public class GameOfWar {
     public static String turn2;
 
     public static int playCard1() {
+
     }
 
     public static int playCard2() {
