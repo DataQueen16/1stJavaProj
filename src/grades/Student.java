@@ -5,10 +5,11 @@ import java.util.ArrayList;
 public class Student {
     private String name;
     private ArrayList<Double> grades = new ArrayList<>();
+    private double grade;
 
-    public Student(String name, double grades) {
+    public Student(String name) {
         this.name = name;
-        this.grades.add(grades);
+        this.grades.add(grade);
     }
 
     // returns the student's name
@@ -40,7 +41,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Student Michael = new Student("Michael", 75.23);
+        Student Michael = new Student("Michael");
         Michael.addGrade(89.53);
         Michael.addGrade(75);
         Michael.addGrade(88.75);
