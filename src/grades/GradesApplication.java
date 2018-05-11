@@ -1,5 +1,6 @@
 package grades;
 
+import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,11 +37,34 @@ public class GradesApplication {
         students.put(Jackie.getName(), Jackie);
         students.put(Stella.getName(), Stella);
 
-        for (Map.Entry<String, Student> entry : students.entrySet()) {
-            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+//        for (Map.Entry<String, Student> entry : students.entrySet()) {
+//            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+//        }
+
+        System.out.println("Welcome folks!\nHere is the list of github usernames of our students: ");
+        System.out.println("1. LovecraftNow\n2. DataQueen16\n3. DegrassiJrHigh\n4. NewMexicoMama");
+        studentMenu();
+    }
+
+
+    public static String studentMenu() {
+        Scanner input = new Scanner(System.in);
+        int answer;
+
+        System.out.println("Please choose a number to see a student's grades: ");
+        answer = input.nextInt();
+
+        if (students.containsKey(answer)) {
+
         }
 
+        String output = "Hey there";
+        return output;
+    }
 
+    public static String nameMatch() {
 
     }
+
+
 }
