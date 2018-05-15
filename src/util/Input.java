@@ -8,7 +8,7 @@ public class Input {
         scanner = new Scanner(System.in).useDelimiter("\n");
     }
 
-    public String getString(String prompt) {
+    public String getString(prompt) {
         System.out.println(prompt);
         return scanner.next();
     }
@@ -27,32 +27,50 @@ public class Input {
 
     public int getInt(String prompt, int min, int max) {
         System.out.println(prompt);
-        int num = scanner.nextInt();
-        if (num >= min && num <= max) {
-            System.out.println("You did it! " + num + " is in range!");
+        int num = getInt();
+//        Integer.valueOf(String s);
+//        Double.valueOf(String s);
+
+            if (num >= min && num <= max) {
+                System.out.println("You did it! " + num + " is in range!");
+                return getInt(prompt, min, max);
+            }
+            System.out.println("Try again poor dear!");
             return num;
         }
-        System.out.println("Try again poor dear!");
-        return getInt(prompt, min, max);
-    }
 
-    public int getInt(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextInt();
+
+    public int getInt() {
+
+        String input = getString();
+
+        try {
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Must input an integer");
+            return getInt();
+        }
     }
 
     public double getDouble(String prompt, double min, double max) {
         System.out.println(prompt);
-        int num = scanner.nextInt();
+        double num = getDouble(prompt);
         if (num >= min && num <= max) {
             System.out.println("You did it! " + num + " is in range!");
-            return num;
+            return getDouble(prompt, min, max);
         }
         System.out.println("Try again poor dear!");
-        return getDouble(prompt, min, max);
+        return num;
     }
 
     public double getDouble(String prompt) {
-        return scanner.nextDouble();
+        String input = getString();
+
+        try{
+            return Double.valueOf(input);
+        }catch (NumberFormatException e) {
+            System.out.println("Input must be a number.");
+            return getDouble(prompt);
+        }
     }
 }
