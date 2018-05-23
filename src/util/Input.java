@@ -8,7 +8,7 @@ public class Input {
         scanner = new Scanner(System.in).useDelimiter("\n");
     }
 
-    public String getString(prompt) {
+    public String getString(String prompt) {
         System.out.println(prompt);
         return scanner.next();
     }
@@ -64,7 +64,7 @@ public class Input {
     }
 
     public double getDouble(String prompt) {
-        String input = getString();
+        String input = getString(prompt);
 
         try{
             return Double.valueOf(input);

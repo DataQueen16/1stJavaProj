@@ -54,17 +54,17 @@ public class GradesApplication {
         System.out.println("Please choose a number to see a student's grades: ");
         answer = input.nextInt();
 
-        if (students.containsKey(answer)) {
-
-        }
+//        if (students.containsKey(answer)) {
+//
+//        }
 
         String output = "Hey there";
         return output;
     }
 
-    public static String nameMatch() {
-
-    }
+//    public static String nameMatch() {
+//
+//    }
 
 
 }

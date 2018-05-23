@@ -14,7 +14,7 @@ public class MoviesApplication {
         System.out.println("1. See all movies\n2. Select a specific category\n3. Exit");
         System.out.println();
 
-        int answer = input.getInt("Pick a number please..."); // Prompt user for the 1st 3 part menu
+        int answer = input.getInt(); // Prompt user for the 1st 3 part menu
 
         switch (answer){
             case 1:           // If choose see all movies, call iterateAllMovies method to display them to the user
@@ -46,7 +46,7 @@ public class MoviesApplication {
         System.out.println("Greetings! What genre are you interested in?");
         System.out.println("1. Drama\n2. Musical\n3. Sci-fi\n4. Horror\n5. Comedy\n6. Animated");
 
-        int answer = input.getInt("Pick a number please.....");  // List choices 1-6
+        int answer = input.getInt();  // List choices 1-6
         switch (answer){
             case 1:
                 String input1 = "Drama";

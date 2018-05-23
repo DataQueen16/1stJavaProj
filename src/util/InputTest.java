@@ -13,7 +13,7 @@ public class InputTest {
         input.yesNo("Do you like Black Panther?");
         input.getInt("What is my age?",30, 45);
 
-        int num = input.getInt("What's your favorite number?");
+        int num = input.getInt();
         System.out.println(num);
 
         input.getDouble("What is the easiest age to get pregnant?",21, 29);
