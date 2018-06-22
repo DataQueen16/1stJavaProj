@@ -25,32 +25,32 @@ public class Input {
         return false;
     }
 
-    public int getInt(String prompt, int min, int max) {
-        System.out.println(prompt);
-        int num = getInt();
-//        Integer.valueOf(String s);
-//        Double.valueOf(String s);
+//    public int getInt(String prompt, int min, int max) {
+//        System.out.println(prompt);
+//        int num = getInt("Enter a number");
+////        Integer.valueOf(String s);
+////        Double.valueOf(String s);
+//
+//            if (num >= min && num <= max) {
+//                System.out.println("You did it! " + num + " is in range!");
+//                return getInt(prompt, min, max);
+//            }
+//            System.out.println("Try again poor dear!");
+//            return num;
+//        }
 
-            if (num >= min && num <= max) {
-                System.out.println("You did it! " + num + " is in range!");
-                return getInt(prompt, min, max);
-            }
-            System.out.println("Try again poor dear!");
-            return num;
-        }
 
-
-    public int getInt() {
-
-        String input = getString();
-
-        try {
-            return Integer.valueOf(input);
-        } catch (NumberFormatException e) {
-            System.out.println("Must input an integer");
-            return getInt();
-        }
-    }
+//    public int getInt() {
+//
+//        String input = getString();
+//
+//        try {
+//            return Integer.valueOf(input);
+//        } catch (NumberFormatException e) {
+//            System.out.println("Must input an integer");
+//            return getInt();
+//        }
+//    }
 
     public double getDouble(String prompt, double min, double max) {
         System.out.println(prompt);
